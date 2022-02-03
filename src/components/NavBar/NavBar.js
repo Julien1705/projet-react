@@ -13,13 +13,13 @@ const navbar = (props) => (
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact="true"  to="/">Accueil</NavLink>
+                            <NavLink className="nav-link" exact="true"  to="/projet-react/">Accueil</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact="true" to="/localisation">Localisation</NavLink>
+                            <NavLink className="nav-link" exact="true" to="/projet-react/localisation">Localisation</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" exact="true" to="/contact">Contact</NavLink>
+                            <NavLink className="nav-link" exact="true" to="/projet-react/contact">Contact</NavLink>
                         </li>
                     </ul>
                 </div>

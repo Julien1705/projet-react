@@ -19,10 +19,10 @@ class Site extends Component {
                     <NavBar />
                     <div className='container'>
                         <Routes>
-                            <Route path="/" exact element={<Accueil />} />
-                            <Route path="/localisation" exact element={<Localisation />} />
-                            <Route path="/contact" exact element={<Contact />} />
-                            <Route path="/contact/form" exact element={<ContactForm />} />
+                            <Route path="/projet-react/" exact element={<Accueil />} />
+                            <Route path="/projet-react/localisation" exact element={<Localisation />} />
+                            <Route path="/projet-react/contact" exact element={<Contact />} />
+                            <Route path="/projet-react/contact/form" exact element={<ContactForm />} />
                             <Route path="*" element={<Erreur404 />} />
                         </Routes>                       
                     </div>
