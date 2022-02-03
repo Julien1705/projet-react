@@ -31,6 +31,9 @@ class Localisation extends Component {
                 <Bouton typeBtn={"btn-info m-1"} clic={() => this.rechercheEtablissement('commissariat_police')}>Commissariat de Police</Bouton>
                 <Bouton typeBtn={"btn-info m-1"} clic={() => this.rechercheEtablissement('pole_emploi')}>Pole Emploi</Bouton>
                 <Bouton typeBtn={"btn-info m-1"} clic={() => this.rechercheEtablissement('prefecture')}>Prefecture</Bouton>
+                <Bouton typeBtn={"btn-info m-1"} clic={() => this.rechercheEtablissement('centre_penitentiaire')}>Centre Penitentiaire</Bouton>
+                <Bouton typeBtn={"btn-info m-1"} clic={() => this.rechercheEtablissement('ti')}>Tribunal d’instance</Bouton>
+                
                 <div className='row no-gutters'>
                     {
                         this.state.recherche && this.state.recherche.map(etablissement => {
