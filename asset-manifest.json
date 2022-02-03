@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/projet-react/static/css/main.0e2814df.css",
-    "main.js": "/projet-react/static/js/main.d824be72.js",
+    "main.js": "/projet-react/static/js/main.252dd4c9.js",
     "static/media/chateau.jpg": "/projet-react/static/media/chateau.a10ab3f81d344cd633c6.jpg",
     "index.html": "/projet-react/index.html",
     "main.0e2814df.css.map": "/projet-react/static/css/main.0e2814df.css.map",
-    "main.d824be72.js.map": "/projet-react/static/js/main.d824be72.js.map"
+    "main.252dd4c9.js.map": "/projet-react/static/js/main.252dd4c9.js.map"
   },
   "entrypoints": [
     "static/css/main.0e2814df.css",
-    "static/js/main.d824be72.js"
+    "static/js/main.252dd4c9.js"
   ]
 }
