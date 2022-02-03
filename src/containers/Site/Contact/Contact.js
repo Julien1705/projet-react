@@ -17,7 +17,7 @@ class Contact extends Component {
                     00 00 00 00 00
                 </div>
                 <h2>Vous préférez nous écrire ?</h2>
-                <Bouton typeBtn={"btn-info"}><NavLink className="nav-link text-white" exact="true" to="/contact/form">Formulaire de contact</NavLink></Bouton>
+                <Bouton typeBtn={"btn-info"}><NavLink className="nav-link text-white" exact="true" to="/projet-react/contact/form">Formulaire de contact</NavLink></Bouton>
 
             </>
         );
