@@ -4,7 +4,7 @@ import Horaires from "./Horaires/Horaires";
 
 
 const etablissement = (props) => (
-    <div className="card text-white bg-info mb-3 col-6" >
+    <div className="card text-white bg-info mb-3">
         <div className="card-header">{props.nom}</div>
         <div className="card-body">
             <h4 className="card-title">

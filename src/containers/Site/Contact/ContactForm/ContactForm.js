@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Titre from '../../../../components/Titres/TitreH1';
 import Bouton from '../../../../components/Bouton/Bouton';
 
+import { Icon } from '@iconify/react';
+
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { NavLink } from "react-router-dom";
@@ -12,14 +14,24 @@ class ContactForm extends Component {
         return (
             <>
                 <Titre>Contactez-nous !</Titre>
-                <div>
-                    <h2>Adresse : </h2>
-                    xxxxxxxxxxxxxxxxxxx
-                    <h2>Telephone : </h2>
-                    00 00 00 00 00
+                <div className="row no-gutters">
+                    <div class="card text-white bg-primary  mb-3 col-6">
+                        <div class="card-header text-center"><Icon icon="ant-design:home-twotone" color="white" /> Adresse <Icon icon="ant-design:home-twotone" color="white" /></div>
+                        <div class="card-body">
+                            <p class="card-text text-center">1A rue de Bomy</p>
+                            <p class="card-text text-center">62560 Coyecques</p>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-primary  mb-3 col-6">
+                        <div class="card-header text-center"><Icon icon="bx:bx-phone-call" color="white" /> Téléphone <Icon icon="bx:bx-phone-call" color="white" /></div>
+                        <div class="card-body">
+                            <p class="card-text text-center">06-38-18-20-22</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <h2>Vous préférez nous écrire ?</h2>
-                <Bouton typeBtn={"btn-info"}><NavLink className="nav-link text-white" exact="true" to="/projet-react/contact">Fermer le formulaire</NavLink></Bouton>
+                <Bouton typeBtn={"btn-info m-2"}><NavLink className="nav-link text-white" exact="true" to="/projet-react/contact">Fermer le formulaire</NavLink></Bouton>
 
                 <form>
                     <div className="form-group">
@@ -51,7 +63,7 @@ class ContactForm extends Component {
                             onBlur={this.props.handleBlur}
                         />
                         {
-                           this.props.touched.email && this.props.errors.email && <span className='text-danger'>{this.props.errors.email}</span>
+                            this.props.touched.email && this.props.errors.email && <span className='text-danger'>{this.props.errors.email}</span>
                         }
                     </div>
                     <div className="form-group">
@@ -69,7 +81,7 @@ class ContactForm extends Component {
                             this.props.touched.message && this.props.errors.message && <span className='text-danger'>{this.props.errors.message}</span>
                         }
                     </div>
-                    <button onClick={this.props.handleSubmit} className="btn btn-primary">Submit</button>
+                    <button onClick={this.props.handleSubmit} className="btn btn-primary mt-2">Envoyer</button>
                 </form>
             </>
         );
@@ -83,17 +95,17 @@ export default withFormik({
         email: "",
         message: ""
     }),
-    validationSchema : Yup.object().shape({
+    validationSchema: Yup.object().shape({
         nom: Yup.string()
-                .min(5,'Le nom doit avoir plus de 5 caractères !')
-                .required('Le nom est obligatoire'),
+            .min(5, 'Le nom doit avoir plus de 5 caractères !')
+            .required('Le nom est obligatoire'),
         email: Yup.string()
-                .email("L'email n'a pas le bon format")
-                .required("L'email est obligatoire"),
+            .email("L'email n'a pas le bon format")
+            .required("L'email est obligatoire"),
         message: Yup.string()
-                .min(100, "Le message doit avoir plus de 100 caractères")
-                .max(200, "Le message doit avoir moins de 200 caractères")
-                .required("Le message est obligatoire")
+            .min(100, "Le message doit avoir plus de 100 caractères")
+            .max(200, "Le message doit avoir moins de 200 caractères")
+            .required("Le message est obligatoire")
     }),
     handleSubmit: (values, { props }) => {
         alert("message envoyé");
