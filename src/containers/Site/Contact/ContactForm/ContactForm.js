@@ -14,15 +14,15 @@ class ContactForm extends Component {
         return (
             <>
                 <Titre>Contactez-nous !</Titre>
-                <div className="row no-gutters">
-                    <div class="card text-white bg-primary  mb-3 col-6">
+                <div className="row no-gutters d-flex justify-content-around">
+                    <div class="card text-white bg-primary  mb-3 col-5">
                         <div class="card-header text-center"><Icon icon="ant-design:home-twotone" color="white" /> Adresse <Icon icon="ant-design:home-twotone" color="white" /></div>
                         <div class="card-body">
                             <p class="card-text text-center">1A rue de Bomy</p>
                             <p class="card-text text-center">62560 Coyecques</p>
                         </div>
                     </div>
-                    <div class="card text-white bg-primary  mb-3 col-6">
+                    <div class="card text-white bg-primary  mb-3 col-5">
                         <div class="card-header text-center"><Icon icon="bx:bx-phone-call" color="white" /> Téléphone <Icon icon="bx:bx-phone-call" color="white" /></div>
                         <div class="card-body">
                             <p class="card-text text-center">06-38-18-20-22</p>
@@ -48,6 +48,7 @@ class ContactForm extends Component {
                         />
                         {
                             this.props.touched.nom && this.props.errors.nom && <span className='text-danger'>{this.props.errors.nom}</span>
+                            
                         }
                     </div>
                     <div className="form-group">
